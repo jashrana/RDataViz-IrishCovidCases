@@ -1,0 +1,7 @@
+"0","library(dplyr)"
+"0",""
+"0","dec21_data <- df%>%"
+"0","  dplyr::filter(TimeStamp == ymd(""2021-12-21""))%>%"
+"0","  group_by(TimeStamp)"
+"0",""
+"0","dec21_data <- subset(dec21_data, select = -c(DailyCCase, ConfirmedC))"

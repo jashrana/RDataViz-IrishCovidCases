@@ -1,0 +1,59 @@
+"0","#Question 4"
+"0","library(ggplot2)"
+"0","Counties <- c(""Monaghan"", ""Galway"", ""Wicklow"", ""Others"")"
+"0","colours <- c(""#1E88E5"", ""#D81B60"", ""#E69F00"", ""lightgrey"")"
+"0",""
+"0","ggplot(df, aes(x = TimeStamp, y = ConfirmedC_per_100k))+"
+"0","  geom_line(data = df%>%filter(CountyName == Counties[1]),"
+"0","            size = 0.7, alpha = 1, aes(color = ""#1E88E5""))+"
+"0","  geom_line(data = df%>%filter(CountyName == Counties[2]),"
+"0","            size = 0.7, alpha = 1, aes(color = ""#D81B60""))+ "
+"0","  geom_line(data = df%>%filter(CountyName == Counties[3]), "
+"0","            size = 0.7, alpha = 1, aes(color = ""#E69F00""))+"
+"0","  geom_ridgeline(data = df%>%filter(CountyName != Counties),"
+"0","            size = 0.2, alpha = 0.52, aes(color = ""lightgrey""))+"
+"0",""
+"0","  labs(title = ""COVID-19 Casesin Ireland"","
+"0","      subtitle = ""Overall Trend of Confirmed Cases per 100k Population"")+"
+"0","  xlab(""Time"") +"
+"0","  ylab(element_blank()) +"
+"0","  scale_color_manual(values = colours, name = ""County"", labels = Counties)+"
+"0","  "
+"0","  theme(panel.background = element_rect(fill = ""white""),"
+"0","    panel.grid.major.y = element_line(size = 0.1, linetype = ""dashed"", "
+"0","                                      colour = 'lightgrey'),"
+"0","    panel.grid.minor.y = element_line(size = 0.068, linetype = ""dotted"", "
+"0","                                      colour = 'lightgrey'),"
+"0","    axis.ticks = element_blank(),"
+"0","    axis.text = element_text(size = 9),"
+"0","    axis.title = element_text(size = 11),"
+"0","    axis.title.y = element_text(size = 11,"
+"0","    angle = 0,"
+"0","    vjust=0.5,"
+"0","    hjust=0,"
+"0","    margin = margin(r=4)),"
+"0","    legend.title = element_text(face=""bold.italic"", size=11),"
+"0","    legend.text = element_text(face=""italic"", size = 9),"
+"0","    legend.box.background = element_rect(fill = 'lightgrey', "
+"0","                                         colour = 'lightgrey'),"
+"0","    legend.key = element_rect(fill = ""white""),"
+"0","    legend.position = ""bottom"","
+"0","    legend.direction = ""horizontal"","
+"0","    legend.justification = ""center"","
+"0","    legend.box.margin = margin(0.5, 0.5, 0.5, 0.5),"
+"0","    plot.title = element_text(face = ""bold"", size = 14),"
+"0","    plot.subtitle = element_text(size = 12),"
+"0","    panel.border = element_blank(),"
+"0","    panel.spacing = unit(1, ""lines""))"
+"1","[1m[33mError[39m in [38;5;232m`check_required_aesthetics()`[39m:[22m
+[33m![39m geom_ridgeline requires the following missing aesthetics: height
+Backtrace:
+[90m 1. [39m[1mbase[22m (local) `<fn>`(x)
+[90m 2. [39mggplot2:::print.ggplot(x)
+[90m 4. [39mggplot2:::ggplot_build.ggplot(x)
+[90m 5. [39mggplot2 (local) by_layer(function(l, d) l$compute_geom_1(d))
+[90m 6. [39mggplot2 (local) f(l = layers[[i]], d = data[[i]])
+[90m 7. [39ml$compute_geom_1(d)
+[90m 8. [39mggplot2 (local) f(..., self = self)
+[90m 9. [39m[38;5;232m[1m[94mggplot2:::check_required_aesthetics([38;5;232m[22m[39mself$geom$required_aes, c(names(data), names(self$aes_params)), snake_class(self$geom)[38;5;232m[1m[94m)[38;5;232m[22m[39m
+"

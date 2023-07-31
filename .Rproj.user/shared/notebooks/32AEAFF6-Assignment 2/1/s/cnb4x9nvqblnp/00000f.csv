@@ -1,0 +1,4 @@
+"0","mean <- mean(dec21_data$ConfirmedC_per_100k)"
+"0",""
+"0","mean_cases <- dec21_data%>%"
+"0","  mutate(values = ConfirmedC_per_100k - mean)"
