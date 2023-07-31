@@ -1,6 +1,8 @@
 # Data Visualisation with R - Irish Covid Cases for each day per county.
  Visualisation using R of a data set of Irish covid case numbers per county.
 
+To view the visuals, refer to the `22222806_Assignment 2.pdf` file. For code, refer `Assignment 2.Rmd` file.
+
 # University of Galway
 ## CT5100 - Data Visualisation
 
